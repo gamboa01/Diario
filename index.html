@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diario Interactivo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css"> <!-- FullCalendar CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Botón para abrir el índice -->
+    <button id="indexButton" class="btn btn-secondary mt-3">Índice</button>
+
+    <!-- Modal para el índice -->
+    <div id="indexModal" class="modal fade">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Calendario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="calendar"></div> <!-- Contenedor para FullCalendar -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5 text-center">
+        <!-- Portada del diario -->
+        <div id="book-cover" class="book-cover d-flex flex-column align-items-center justify-content-center">
+            <h1>Mi Diario</h1>
+            <p class="subtitle">365 días juntos</p>
+            <button id="readButton" class="btn btn-primary mt-4">Leer</button>
+        </div>
+
+        <!-- Vista de libro -->
+        <div id="book" class="d-none book-view">
+            <div class="page-left border p-4">
+                <div class="page-content">
+                    <h5 id="date-left" class="text-muted"></h5>
+                    <p id="content-left"></p>
+                </div>
+                <footer id="footer-left" class="footer text-center">Página 1</footer>
+            </div>
+            
+            <div class="page-right border p-4">
+                <div class="page-content">
+                    <h5 id="date-right" class="text-muted"></h5>
+                    <p id="content-right"></p>
+                </div>
+                <footer id="footer-right" class="footer text-center">Página 2</footer>
+            </div>
+        </div>
+
+        <!-- Botones de navegación (flechas) -->
+        <div id="prev-page" class="navigation-arrow prev-arrow">&larr;</div>
+        <div id="next-page" class="navigation-arrow next-arrow">&rarr;</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script> <!-- FullCalendar JS -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/locales/es.min.js"></script> <!-- Locale en español -->
+    <script src="script.js"></script>
+</body>
+</html>
