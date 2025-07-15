@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Diario Interactivo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container my-3 my-sm-5 text-center">
+        <button id="indexButton" class="btn btn-secondary mb-3 d-none">Índice</button>
+
+        <div id="indexModal" class="modal fade">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Calendario</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="calendar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="book-cover" class="book-cover d-flex flex-column align-items-center justify-content-center">
+            <h1>Mi Diario</h1>
+            <p class="subtitle">365 días juntos</p>
+            <button id="readButton" class="btn btn-primary mt-4">Leer</button>
+        </div>
+
+        <div id="book" class="d-none book-view">
+            <div class="mobile-page border d-block d-sm-none">
+                <div class="page-content">
+                    <h5 id="date-mobile" class="text-muted"></h5>
+                    <p id="content-mobile"></p>
+                </div>
+                <footer id="footer-mobile" class="footer text-center">Página 1</footer>
+            </div>
+            <div class="desktop-pages d-none d-sm-flex">
+                <div class="page-left border p-4">
+                    <div class="page-content">
+                        <h5 id="date-left" class="text-muted"></h5>
+                        <p id="content-left"></p>
+                    </div>
+                    <footer id="footer-left" class="footer text-center">Página 1</footer>
+                </div>
+                <div class="page-right border p-4">
+                    <div class="page-content">
+                        <h5 id="date-right" class="text-muted"></h5>
+                        <p id="content-right"></p>
+                    </div>
+                    <footer id="footer-right" class="footer text-center">Página 2</footer>
+                </div>
+            </div>
+        </div>
+
+        <div id="prev-page" class="navigation-arrow prev-arrow d-none">&larr;</div>
+        <div id="next-page" class="navigation-arrow next-arrow d-none">&rarr;</div>
+
+
+        <div class="mobile-navigation d-block d-sm-none mt-3 d-none">
+            <button id="prev-page-mobile" class="btn btn-secondary">&larr; Anterior</button>
+            <button id="next-page-mobile" class="btn btn-secondary ms-2">Siguiente &rarr;</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/locales/es.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
